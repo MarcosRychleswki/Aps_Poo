@@ -2,13 +2,19 @@ package Banco;
 
 public class Conta {
 
-	private Integer numConta;
-	private String cliente;
-	private Integer cpf;
-	private double saldo;
+	protected Integer numConta;
+	protected String cliente;
+	protected Integer cpf;
+	protected double saldo;
 	
 	
 	//CONSTRUTOR
+	
+	
+	public Conta() {
+	}
+	
+	
 	public Conta(Integer numConta, String cliente, Integer cpf) {
 		super();
 		this.numConta = numConta;
