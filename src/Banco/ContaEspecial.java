@@ -24,7 +24,7 @@ public class ContaEspecial extends ContaCorrente {
 		this.nomeGerente = nomeGerente;
 	}
 	
-	
+
 public String toString() {
 		
 		

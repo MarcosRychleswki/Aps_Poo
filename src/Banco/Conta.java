@@ -1,6 +1,6 @@
 package Banco;
 
-public class Conta {
+public abstract class Conta {
 
 	protected Integer numConta;
 	protected String cliente;
@@ -61,8 +61,6 @@ public class Conta {
 	public  boolean sacar(double valorSacado) {
 		
 		if (valorSacado > this.saldo){
-			
-			
 			return false;
 			
 		}
