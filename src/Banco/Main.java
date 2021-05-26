@@ -1,5 +1,6 @@
 package Banco;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 
@@ -52,10 +53,45 @@ public class Main {
 		
 		
 		if(conta == 3) {
+			ContaEspecial contaEspecial = new ContaEspecial(1, "Marcos", 503173, 100.00, "Lucas");
+			System.out.println("Cliente: " + contaEspecial.getCliente());
+			System.out.println("Numero da conta: " + contaEspecial.getNumConta());
+			System.out.println("CPF: " + contaEspecial.getCpf());
+			System.out.println("Limite: " + contaEspecial.getLimite());
+			System.out.println("Saldo " + contaEspecial.getSaldo());
+			System.out.println("Seu gerente: " + contaEspecial.getNomeGerente());
+
+
+			contaEspecial.depositar(100.00);
 			
+			System.out.println("Saldo " + contaEspecial.getSaldo());
+			//System.out.println("Voce fez um deposito seu saldo agr e: " + contaCorrente.getSaldo());
+			System.out.println(contaEspecial.usandoLimite());
+			contaEspecial.sacar(80.00);
+			System.out.println("Saldo " + contaEspecial.getSaldo());
+			contaEspecial.sacar(20.00);
+			System.out.println("Saldo " + contaEspecial.getSaldo());
+			System.out.println("Saldo " + contaEspecial.getSaldo());
+
 		}
 	
+		if(conta == 4) {
+			
+			GerenciarConta g = new GerenciarConta();
+			g.adicionarConta(new ContaCorrente(1, "Marcos", 503173, 0.00));
+			g.adicionarConta(new ContaPoupanca(2, "Lais", 5031));
+			g.adicionarConta(new ContaEspecial(3, "thiago", 503173, 100.00, "Lucas"));
+			g.removerConta(4);
+			
+
+
+			
+		}
 		
+		
+		
+
+
 		
 		
 	}

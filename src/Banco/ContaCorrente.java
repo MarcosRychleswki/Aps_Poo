@@ -64,8 +64,13 @@ public class ContaCorrente extends Conta {
 	
 	public String toString() {
 
-		return numConta + cliente + cpf + String.format("%.2f", saldo) + limite;
+		return numConta+ " " + cliente+ " " +cpf+ " " +String.format("%.2f", saldo)+ " " +limite;
 
+	}
+
+
+	public boolean isEmpty() {
+		return false;
 	}
 
 }

@@ -28,11 +28,11 @@ public class ContaEspecial extends ContaCorrente {
 public String toString() {
 		
 		
-		return numConta 
-				+ cliente 
-				+ cpf  
-				+ String.format("%.2f", saldo)
-				+ limite
+		return numConta  + " "
+				+ cliente + " "
+				+ cpf + " "  
+				+ String.format("%.2f", saldo) + " "
+				+ limite + " "
 				+ nomeGerente;
 		
 	}
