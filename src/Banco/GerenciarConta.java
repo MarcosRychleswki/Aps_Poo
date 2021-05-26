@@ -6,6 +6,7 @@ import java.util.List;
 public class GerenciarConta {
 
 	ArrayList<Conta> gerenciarConta = new ArrayList();
+	ArrayList<ContaEspecial> gerenciarContaEspecial = new ArrayList();
 	ContaCorrente conta = new ContaCorrente();
 
 	public void adicionarConta(Conta c) {
@@ -18,9 +19,9 @@ public class GerenciarConta {
 		for (int i = 0; i <= gerenciarConta.size(); i++) {
 			if (gerenciarConta.get(i).getNumConta() == numeroConta) {
 				gerenciarConta.remove(gerenciarConta.get(i));
-				System.out.println(" encontrou");
+				System.out.println("encontrou");
 				encontrou = true;
-			} else if (i == gerenciarConta.size() && encontrou  == false ) {
+			} else if (i == gerenciarConta.size() && encontrou == false) {
 				System.out.println("nao encontrou");
 				encontrou = false;
 			}
@@ -31,9 +32,20 @@ public class GerenciarConta {
 		return encontrou;
 	}
 
-//	public String buscarContasEspeciais() {
-//		
-//	}
+	public String buscarContasEspeciais(int numero) {
+		for (int i = 0; i < gerenciarContaEspecial.size(); i++) {
+			System.out.println(gerenciarContaEspecial.get(i).usandoLimite());
+		}
+		return "foi";
+	}
+
+	public String buscarContasEspeciaiss() {
+		for (int i = 0; i < gerenciarContaEspecial.size(); i++) {
+			System.out.println(gerenciarContaEspecial.get(i));
+		}
+		return "foi";
+	}
+
 //	
 //	public String buscarClientesUsandoLimite() {
 //		
